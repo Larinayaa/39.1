@@ -13,6 +13,9 @@ public class Lists {
         return countMap;
     }
     public static Map<String, Boolean> getDuplicateStatusMap(List<String> strings) {//второй проверяет повторения
+        if (strings == null) {
+            return new HashMap<>();
+        }
         Map<String, Integer> countMap = getCountMap(strings);
         Map<String, Boolean> duplicateStatusMap = new HashMap<>();
 
